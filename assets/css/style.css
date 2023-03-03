@@ -160,7 +160,9 @@ nav ul li a:hover {
 .slider_btn:hover .slider_btn_arrow {
     color: #FFFFFF;
 }
-
+.min_vh_60_xsm {
+    min-height: 60vh !important;
+}
 .slider_btn_arrow {
     line-height: 0.5;
     color: #F53838;
@@ -185,9 +187,7 @@ nav ul li a:hover {
 }
 
 
-.min_vh_90 {
-    min-height: 90vh !important;
-}
+
 
 /* footer */
 .footer_p_color {
@@ -198,11 +198,17 @@ nav ul li a:hover {
     .pt_60_lsm_min {
         padding-top: 60px !important;
     }
+
+
 }
 
 @media (min-width:992px) {
     .Provide_h2_width {
         width: 383.41px;
+    }
+
+    .min_vh_90 {
+        min-height: 90vh !important;
     }
 
     .Trusted_width {
@@ -317,12 +323,15 @@ nav ul li a:hover {
 }
 
 
+
 @media (max-width:576px) {
     .button_hero_section {
         background: #F53838;
         border-radius: 10px;
         padding: 10px 40px;
     }
+
+
 
     .Choose_box_1 {
         padding: 50px;
