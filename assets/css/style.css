@@ -25,7 +25,6 @@
 .pl_40 {
     padding-left: 40px;
 }
-
 .Choose_box_btn {
     border: 2px solid #F53838;
     border-radius: 50px;
@@ -112,6 +111,10 @@
     width: 13px;
 }
 
+.radius_100 {
+    border-radius: 100px !important;
+}
+
 nav ul li a:hover {
     color: #F53838 !important;
     -webkit-text-stroke: 0.3px;
@@ -160,9 +163,11 @@ nav ul li a:hover {
 .slider_btn:hover .slider_btn_arrow {
     color: #FFFFFF;
 }
+
 .min_vh_60_xsm {
     min-height: 60vh !important;
 }
+
 .slider_btn_arrow {
     line-height: 0.5;
     color: #F53838;
@@ -222,7 +227,7 @@ nav ul li a:hover {
     }
 
     .Provide_width {
-        width: 427.88px;
+        width: 400px;
     }
 
     .Trusted_width {
