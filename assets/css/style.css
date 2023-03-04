@@ -22,9 +22,7 @@
     box-shadow: 0px 3px 30px -1px #0d102511;
 }
 
-.pl_40 {
-    padding-left: 40px;
-}
+
 .Choose_box_btn {
     border: 2px solid #F53838;
     border-radius: 50px;
@@ -167,6 +165,7 @@ nav ul li a:hover {
 .min_vh_60_xsm {
     min-height: 60vh !important;
 }
+
 .hover_line::after {
     content: "";
     position: absolute;
@@ -182,6 +181,7 @@ nav ul li a:hover {
     width: 100%;
     transform: translateX(-50%);
 }
+
 .slider_btn_arrow {
     line-height: 0.5;
     color: #F53838;
@@ -334,6 +334,11 @@ nav ul li a:hover {
 
 }
 
+@media (min-width:1200px) {
+    .pl_40 {
+        padding-left: 40px;
+    }
+}
 
 @media (max-width:992px) {
     .section {
