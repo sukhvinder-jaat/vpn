@@ -1,642 +1,1062 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- gsap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <!-- Bootstrap link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
-        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="/assets/img/png/logo.png">
-    <link rel="stylesheet" href="/assets/css/root.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="/assets/img/png/logo.png" />
+    <link rel="stylesheet" href="/assets/css/root.css" />
 
     <title>LaslesVPN</title>
-</head>
+  </head>
 
-<body>
-    <header class="min_vh_90 d-flex flex-column min_vh_60_xsm ">
-        <nav class="pt-4">
-            <div class="container">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="d-flex align-items-center ">
-                        <img class="logo_transform" src="/assets/img/png/logo.png" alt="logo">
-                        <span class="ff_Rubik fw_500 lightblue fs_lg ps-1 ">Lasles<span
-                                class="fw_700 fs_lg">VPN</span></span>
-                    </div>
-
-                    <ul class="d-flex list-unstyled mb-0" id="show">
-                        <li><a href="#" class="fw_400 pl_40 ff_Rubik fs_sm grey">About</a></li>
-                        <li><a href="#" class="fw_400 pl_40 ff_Rubik fs_sm grey">Features</a></li>
-                        <li><a href="#" class="fw_400 pl_40 ff_Rubik fs_sm grey">Pricing</a></li>
-                        <li><a href="#" class="fw_400 pl_40 ff_Rubik fs_sm grey">Testimonials</a></li>
-                        <li><a href="#" class="fw_400 pl_40 ff_Rubik fs_sm grey">Help</a></li>
-                        <li><a href="#" class="fw_500 pl_40 ff_Rubik fs_sm grey d-xl-none">Sign In</a></li>
-                        <li><a href="#" class="fw_400 pl_40 ff_Rubik fs_sm grey pink nav_button d-xl-none">Sign Up</a>
-                        </li>
-                    </ul>
-
-                    <ul class="d-flex d-xl-flex d-none list-unstyled mb-0">
-                        <li><a href="#" class="fw_500 pe-lg-3 ff_Rubik fs_sm grey">Sign In</a></li>
-                        <li><a href="#" class="fw_400 ff_Rubik fs_sm grey pink nav_button">Sign Up</a></li>
-                    </ul>
-                    <span class="d-flex flex-column d-xl-none" onclick="navshow()">
-                        <span class="line"></span>
-                        <span class="line"></span>
-                        <span class="line"></span>
-                    </span>
-
-                </div>
-            </div>
-        </nav>
-        <!------------------------------ hero section----------------------------------------------------------- -->
-        <div class="container d-flex flex-grow-1 align-items-center ">
-            <div>
-                <div class="row text-center text-md-start flex-column-reverse flex-md-row">
-                    <div class="col-12 col-md-6">
-                        <h1 class="ff_Rubik fw_500 fs_3xl lightblue pt-3 pt-md-0 pe- xl-5">
-                            Want anything to be easy with
-                            <span class="fw_700">LaslesVPN.</span>
-                        </h1>
-                        <p class="fw_500 fs_sm ff_Rubik grey pt-xl-3 pe-xl-3">
-                            Provide a network for all your needs with ease and fun using LaslesVPN discover interesting
-                            features from us.
-                        </p>
-                        <a href="#"
-                            class="fw_700 fs_sm ff_Rubik button_hero_section d-inline-block text-white mt-xl-3">Get
-                            Started</a>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <img class="w-100" src="/assets/img/svg/section_1_image.svg" alt="section_1_image">
-                    </div>
-                </div>
-
+  <body>
+    <header class="min_vh_90 d-flex flex-column min_vh_60_xsm">
+      <nav class="pt-4">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center logo">
+              <img
+                class="logo_transform"
+                src="/assets/img/png/logo.png"
+                alt="logo"
+              />
+              <span class="ff_Rubik fw_500 lightblue fs_lg ps-1"
+                >Lasles<span class="fw_700 fs_lg">VPN</span></span
+              >
             </div>
 
+            <ul class="d-flex list-unstyled mb-0" id="show">
+              <li class="fw_400 pl_40 ff_Rubik fs_sm grey">About</li>
+              <li>
+                <a href="#" class="fw_400 pl_40 ff_Rubik fs_sm grey"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a href="#" class="fw_400 pl_40 ff_Rubik fs_sm grey">Pricing</a>
+              </li>
+              <li>
+                <a href="#" class="fw_400 pl_40 ff_Rubik fs_sm grey"
+                  >Testimonials</a
+                >
+              </li>
+              <li>
+                <a href="#" class="fw_400 pl_40 ff_Rubik fs_sm grey">Help</a>
+              </li>
+              <li>
+                <a href="#" class="fw_500 pl_40 ff_Rubik fs_sm grey d-xl-none"
+                  >Sign In</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="fw_400 pl_40 ff_Rubik fs_sm grey pink nav_button d-xl-none"
+                  >Sign Up</a
+                >
+              </li>
+            </ul>
+
+            <ul class="d-flex d-xl-flex d-none list-unstyled mb-0" id="btns">
+              <li>
+                <a href="#" class="fw_500 pe-lg-3 ff_Rubik fs_sm grey"
+                  >Sign In</a
+                >
+              </li>
+              <li>
+                <a href="#" class="fw_400 ff_Rubik fs_sm grey pink nav_button"
+                  >Sign Up</a
+                >
+              </li>
+            </ul>
+            <span class="d-flex flex-column d-xl-none" onclick="navshow()">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </span>
+          </div>
         </div>
+      </nav>
+      <!------------------------------ hero section----------------------------------------------------------- -->
+      <div class="container d-flex flex-grow-1 align-items-center">
+        <div>
+          <div
+            class="row text-center text-md-start flex-column-reverse flex-md-row"
+          >
+            <div class="col-12 col-md-6 heroPara">
+              <h1
+                class="ff_Rubik fw_500 fs_3xl lightblue pt-3 pt-md-0 pe- xl-5"
+                id="heroParaAnimation"
+              >
+                Want anything to be easy with
+                <span class="fw_700" id="SpanText">LaslesVPN.</span>
+              </h1>
+              <p
+                class="fw_500 fs_sm ff_Rubik grey pt-xl-3 pe-xl-3"
+                id="heroParaAnimation"
+              >
+                Provide a network for all your needs with ease and fun using
+                LaslesVPN discover interesting features from us.
+              </p>
+              <a
+                href="#"
+                class="fw_700 fs_sm ff_Rubik button_hero_section d-inline-block text-white mt-xl-3"
+                id="heroParaAnimation"
+                >Get Started</a
+              >
+            </div>
+            <div class="col-12 col-md-6" id="heroImage">
+              <img
+                class="w-100"
+                id="imageHero"
+                src="/assets/img/svg/section_1_image.svg"
+                alt="section_1_image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <div class="container">
-        <div class="section_1_box mt-3">
-            <div
-                class="d-flex justify-content-evenly flex-column flex-sm-row text-center text-md-start align-items-center ">
-
-                <div class="d-flex align-items-center flex-column flex-md-row">
-                    <img src="/assets/img/png/contact.png" alt="contact">
-                    <div class="ps-md-4 py-3 py-sm-0">
-                        <p class="ff_Rubik lightblue fw_700 fs_xl mb-0">90+</p>
-                        <p class="ff_Rubik grey fw_400 fs_lg mb-0">Users</p>
-                    </div>
-                </div>
-
-
-                <div class="d-flex justify-content-center d-none d-md-block">
-                    <div class="box_hr"></div>
-                </div>
-
-
-                <div class="d-flex align-items-center flex-column flex-md-row ps-2 pe-2 p-md-">
-                    <img src="/assets/img/png/location.png" alt="Locations">
-                    <div class="ps-md-4 py-3 py-sm-0">
-                        <p class="ff_Rubik lightblue fw_700 fs_xl mb-0">30+</p>
-                        <p class="ff_Rubik grey fw_400 fs_lg mb-0">Locations</p>
-                    </div>
-                </div>
-
-
-                <div class="d-flex justify-content-center d-none d-md-block">
-                    <div class="box_hr"></div>
-                </div>
-
-
-                <div class="d-flex align-items-center flex-column flex-md-row ">
-                    <img src="/assets/img/png/server.png" alt="Server">
-                    <div class="ps-md-4">
-                        <p class="ff_Rubik lightblue fw_700 fs_xl mb-0">50+</p>
-                        <p class="ff_Rubik grey fw_400 fs_lg mb-0">Servers</p>
-                    </div>
-                </div>
-
+      <div class="section_1_box mt-3">
+        <div
+          class="d-flex justify-content-evenly flex-column flex-sm-row text-center text-md-start align-items-center"
+        >
+          <div
+            class="d-flex align-items-center flex-column flex-md-row"
+            id="animationBox"
+          >
+            <img src="/assets/img/png/contact.png" alt="contact" />
+            <div class="ps-md-4 py-3 py-sm-0">
+              <p class="ff_Rubik lightblue fw_700 fs_xl mb-0">90+</p>
+              <p class="ff_Rubik grey fw_400 fs_lg mb-0">Users</p>
             </div>
+          </div>
+
+          <div
+            class="d-flex justify-content-center d-none d-md-block"
+            id="animationBox"
+          >
+            <div class="box_hr"></div>
+          </div>
+
+          <div
+            class="d-flex align-items-center flex-column flex-md-row ps-2 pe-2 p-md-"
+            id="animationBox"
+          >
+            <img src="/assets/img/png/location.png" alt="Locations" />
+            <div class="ps-md-4 py-3 py-sm-0">
+              <p class="ff_Rubik lightblue fw_700 fs_xl mb-0">30+</p>
+              <p class="ff_Rubik grey fw_400 fs_lg mb-0">Locations</p>
+            </div>
+          </div>
+
+          <div
+            class="d-flex justify-content-center d-none d-md-block"
+            id="animationBox"
+          >
+            <div class="box_hr"></div>
+          </div>
+
+          <div
+            class="d-flex align-items-center flex-column flex-md-row"
+            id="animationBox"
+          >
+            <img src="/assets/img/png/server.png" alt="Server" />
+            <div class="ps-md-4">
+              <p class="ff_Rubik lightblue fw_700 fs_xl mb-0">50+</p>
+              <p class="ff_Rubik grey fw_400 fs_lg mb-0">Servers</p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!------------------------------------------------- Provide --------------------------------------------------------->
 
-    <div class="container py-3 py-lg-5">
-        <div class="row text-center text-md-start align-items-center">
-            <div class="col-12 col-md-7">
-                <img class="w-75" src="/assets/img/png/section_3_image.png" alt="Boy work">
-            </div>
-            <div class="col-12 col-md-5">
-                <h2 class="ff_Rubik fw_500 fs_2xl lightblue Provide_h2_width">We Provide Many Features You Can Use
-                </h2>
-                <p class="ff_Rubik fw_400 fs_sm grey Provide_width pt-lg-3">
-                    You can explore the features that we provide with fun and have their own functions each feature.
-                </p>
-                <div class="d-flex justify-content-center justify-content-md-start">
-                    <div>
-                        <div class="d-flex align-items-center pt-lg-3">
-                            <img src="/assets/img/png/tick.png" alt="TICK">
-                            <p class="ff_Rubik fw_400 fs_sm grey mb-0 ps-2">Powerfull online protection.</p>
-                        </div>
-                        <div class="d-flex align-items-center pt-3">
-                            <img src="/assets/img/png/tick.png" alt="TICK">
-                            <p class="ff_Rubik fw_400 fs_sm grey mb-0 ps-2">Internet without borders.</p>
-                        </div>
-                        <div class="d-flex align-items-center pt-3">
-                            <img src="/assets/img/png/tick.png" alt="TICK">
-                            <p class="ff_Rubik fw_400 fs_sm grey mb-0 ps-2">Supercharged VPN</p>
-                        </div>
-                        <div class="d-flex align-items-center pt-3">
-                            <img src="/assets/img/png/tick.png" alt="TICK">
-                            <p class="ff_Rubik fw_400 fs_sm grey mb-0 ps-2">No specific time limits.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container py-3 py-lg-5" id="provideContainer">
+      <div class="row text-center text-md-start align-items-center">
+        <div class="col-12 col-md-7">
+          <img
+            class="w-75"
+            id="provideImage"
+            src="/assets/img/png/section_3_image.png"
+            alt="Boy work"
+          />
         </div>
+        <div class="col-12 col-md-5" id="provideData">
+          <h2
+            class="ff_Rubik fw_500 fs_2xl lightblue Provide_h2_width"
+            id="provideText"
+          >
+            We Provide Many Features You Can Use
+          </h2>
+          <p
+            class="ff_Rubik fw_400 fs_sm grey Provide_width pt-lg-3"
+            id="provideText"
+          >
+            You can explore the features that we provide with fun and have their
+            own functions each feature.
+          </p>
+          <div class="d-flex justify-content-center justify-content-md-start">
+            <div>
+              <div class="d-flex align-items-center pt-lg-3" id="provideText">
+                <img src="/assets/img/png/tick.png" alt="TICK" />
+                <p class="ff_Rubik fw_400 fs_sm grey mb-0 ps-2">
+                  Powerfull online protection.
+                </p>
+              </div>
+              <div class="d-flex align-items-center pt-3" id="provideText">
+                <img src="/assets/img/png/tick.png" alt="TICK" />
+                <p class="ff_Rubik fw_400 fs_sm grey mb-0 ps-2">
+                  Internet without borders.
+                </p>
+              </div>
+              <div class="d-flex align-items-center pt-3" id="provideText">
+                <img src="/assets/img/png/tick.png" alt="TICK" />
+                <p class="ff_Rubik fw_400 fs_sm grey mb-0 ps-2">
+                  Supercharged VPN
+                </p>
+              </div>
+              <div class="d-flex align-items-center pt-3" id="provideText">
+                <img src="/assets/img/png/tick.png" alt="TICK" />
+                <p class="ff_Rubik fw_400 fs_sm grey mb-0 ps-2">
+                  No specific time limits.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!---------------------------------------------- Choose---------------------------------------- -->
-    <div class="lightgrey_bg ">
-        <div class="container pt-3 pt-lg-5">
-            <h2 class="ff_Rubik fw_500 fs_2xl lightblue text-center">Choose Your Plan</h2>
-            <p class="ff_Rubik fw_400 fs_sm grey text-center Choose_width mx-auto pt-3">
-                Let's choose the package that is best for you and explore
-                it happily and cheerfully.
-            </p>
-            <div class="row align-items-center justify-content-center pt-3 pt-lg-5 pb-xl-5">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="Choose_box_1 d-flex justify-content-between flex-column align-items-center">
-                        <div class="d-flex flex-column align-items-center">
-                            <div>
-                                <img class="w-100" src="/assets/img/png/box.png" alt="gift_box">
-                                <p class="ff_Rubik fw_500 fs_md lightblue text-center pt-3 pt-lg-4">Free Plan</p>
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <div class="">
-                                    <div class="d-flex align-content-center pt-3 pt-lg-4">
-                                        <img class="click_image my-auto" src="/assets/img/png/tick2.png" alt="tick_2">
-                                        <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">Unlimited Bandwitch</p>
-                                    </div>
-                                    <div class="d-flex align-content-center pt-2">
-                                        <img class="click_image my-auto" src="/assets/img/png/tick2.png" alt="tick_2">
-                                        <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">Encrypted Connection</p>
-                                    </div>
-                                    <div class="d-flex align-content-center pt-2">
-                                        <img class="click_image my-auto" src="/assets/img/png/tick2.png" alt="tick_2">
-                                        <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">No Traffic Logs</p>
-                                    </div>
-                                    <div class="d-flex align-content-center pt-2">
-                                        <img class="click_image my-auto" src="/assets/img/png/tick2.png" alt="tick_2">
-                                        <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">Works on All Devices</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="ff_Rubik fw_500 fs_xl lightblue text-center">Free</p>
-                            <a href="#"
-                                class="ff_Rubik fw_700 fs_sm orange d-inline-block Choose_box_btn text-center">Select</a>
-                        </div>
-                    </div>
+    <div class="lightgrey_bg" id="plan">
+      <div class="container pt-3 pt-lg-5">
+        <h2 class="ff_Rubik fw_500 fs_2xl lightblue text-center planeHeading">
+          Choose Your Plan
+        </h2>
+        <p
+          class="ff_Rubik fw_400 fs_sm grey text-center Choose_width mx-auto pt-3 planeHeading"
+        >
+          Let's choose the package that is best for you and explore it happily
+          and cheerfully.
+        </p>
+        <div
+          class="row align-items-center justify-content-center pt-3 pt-lg-5 pb-xl-5"
+        >
+          <div class="col-12 col-md-6 col-lg-4" id="planeBox1">
+            <div
+              class="Choose_box_1 d-flex justify-content-between flex-column align-items-center"
+            >
+              <div class="d-flex flex-column align-items-center">
+                <div>
+                  <img
+                    class="w-100"
+                    src="/assets/img/png/box.png"
+                    alt="gift_box"
+                  />
+                  <p
+                    class="ff_Rubik fw_500 fs_md lightblue text-center pt-3 pt-lg-4"
+                  >
+                    Free Plan
+                  </p>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4 pt-3 pt-md-0">
-                    <div class="Choose_box_1 d-flex flex-column justify-content-between align-items-center ">
-                        <div class="d-flex align-items-center flex-column">
-                            <div>
-                                <img class="w-100" src="/assets/img/png/box.png" alt="gift_box">
-                                <p class="ff_Rubik fw_500 fs_md lightblue text-center pt-3 pt-lg-4">Standard Plan</p>
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <div class="">
-                                    <div class="d-flex align-content-center pt-3 pt-lg-4">
-                                        <img class="click_image my-auto" src="/assets/img/png/tick2.png" alt="tick2">
-                                        <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">Unlimited Bandwitch</p>
-                                    </div>
-                                    <div class="d-flex align-content-center pt-2">
-                                        <img class="click_image my-auto" src="/assets/img/png/tick2.png" alt="tick2">
-                                        <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">Encrypted Connection</p>
-                                    </div>
-                                    <div class="d-flex align-content-center pt-2">
-                                        <img class="click_image my-auto" src="/assets/img/png/tick2.png" alt="tick2">
-                                        <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">Yes Traffic Logs</p>
-                                    </div>
-                                    <div class="d-flex align-content-center pt-2">
-                                        <img class="click_image my-auto" src="/assets/img/png/tick2.png" alt="tick2">
-                                        <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">Works on All Devices</p>
-                                    </div>
-                                    <div class="d-flex align-content-center pt-2">
-                                        <img class="click_image my-auto" src="/assets/img/png/tick2.png" alt="tick2">
-                                        <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">Connect Anyware</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="ff_Rubik fw_500 fs_xl lightblue text-center">$9 <span class="grey">/ mo</span></p>
-                            <a href="#"
-                                class="ff_Rubik fw_700 fs_sm orange d-inline-block Choose_box_btn text-center">Select</a>
-                        </div>
+                <div class="d-flex justify-content-center">
+                  <div class="">
+                    <div class="d-flex align-content-center pt-3 pt-lg-4">
+                      <img
+                        class="click_image my-auto"
+                        src="/assets/img/png/tick2.png"
+                        alt="tick_2"
+                      />
+                      <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">
+                        Unlimited Bandwitch
+                      </p>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 pt-3 pt-lg-0">
-                    <div class="Choose_box_1 d-flex flex-column justify-content-between align-items-center">
-                        <div class="d-flex flex-column align-items-center">
-                            <div>
-                                <img class="w-100" src="/assets/img/png/box.png" alt="gift_box">
-                                <p class="ff_Rubik fw_500 fs_md lightblue text-center pt-3 pt-lg-4">Premium Plan</p>
-                            </div>
-                            <div class="d-flex justify-content-center ">
-                                <div class="d-flex flex-column">
-                                    <div class="d-flex align-content-center pt-3 pt-lg-4">
-                                        <img class="click_image my-auto" src="/assets/img/png/tick2.png" alt="tick2">
-                                        <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">Unlimited Bandwitch</p>
-                                    </div>
-                                    <div class="d-flex align-content-center pt-2">
-                                        <img class="click_image my-auto" src="/assets/img/png/tick2.png" alt="tick2">
-                                        <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">Encrypted Connection</p>
-                                    </div>
-                                    <div class="d-flex align-content-center pt-2">
-                                        <img class="click_image my-auto" src="/assets/img/png/tick2.png" alt="tick2">
-                                        <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">No Traffic Logs</p>
-                                    </div>
-                                    <div class="d-flex align-content-center pt-2">
-                                        <img class="click_image my-auto" src="/assets/img/png/tick2.png" alt="tick2">
-                                        <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">Works on All Devices</p>
-                                    </div>
-                                    <div class="d-flex align-content-center pt-2">
-                                        <img class="click_image my-auto" src="/assets/img/png/tick2.png" alt="tick2">
-                                        <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">Connect Anyware</p>
-                                    </div>
-                                    <div class="d-flex align-content-center pt-2">
-                                        <img class="click_image my-auto" src="/assets/img/png/tick2.png" alt="tick2">
-                                        <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">Get New Features</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="ff_Rubik fw_500 fs_xl lightblue text-center">$12 <span class="grey">/ mo</span>
-                            </p>
-                            <a href="#"
-                                class="ff_Rubik fw_700 fs_sm orange d-inline-block Choose_box_btn text-center">Select</a>
-                        </div>
+                    <div class="d-flex align-content-center pt-2">
+                      <img
+                        class="click_image my-auto"
+                        src="/assets/img/png/tick2.png"
+                        alt="tick_2"
+                      />
+                      <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">
+                        Encrypted Connection
+                      </p>
                     </div>
+                    <div class="d-flex align-content-center pt-2">
+                      <img
+                        class="click_image my-auto"
+                        src="/assets/img/png/tick2.png"
+                        alt="tick_2"
+                      />
+                      <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">
+                        No Traffic Logs
+                      </p>
+                    </div>
+                    <div class="d-flex align-content-center pt-2">
+                      <img
+                        class="click_image my-auto"
+                        src="/assets/img/png/tick2.png"
+                        alt="tick_2"
+                      />
+                      <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">
+                        Works on All Devices
+                      </p>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div>
+                <p class="ff_Rubik fw_500 fs_xl lightblue text-center">Free</p>
+                <a
+                  href="#"
+                  class="ff_Rubik fw_700 fs_sm orange d-inline-block Choose_box_btn text-center"
+                  >Select</a
+                >
+              </div>
             </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 pt-3 pt-md-0" id="planeBox2">
+            <div
+              class="Choose_box_1 d-flex flex-column justify-content-between align-items-center"
+            >
+              <div class="d-flex align-items-center flex-column">
+                <div>
+                  <img
+                    class="w-100"
+                    src="/assets/img/png/box.png"
+                    alt="gift_box"
+                  />
+                  <p
+                    class="ff_Rubik fw_500 fs_md lightblue text-center pt-3 pt-lg-4"
+                  >
+                    Standard Plan
+                  </p>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <div class="">
+                    <div class="d-flex align-content-center pt-3 pt-lg-4">
+                      <img
+                        class="click_image my-auto"
+                        src="/assets/img/png/tick2.png"
+                        alt="tick2"
+                      />
+                      <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">
+                        Unlimited Bandwitch
+                      </p>
+                    </div>
+                    <div class="d-flex align-content-center pt-2">
+                      <img
+                        class="click_image my-auto"
+                        src="/assets/img/png/tick2.png"
+                        alt="tick2"
+                      />
+                      <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">
+                        Encrypted Connection
+                      </p>
+                    </div>
+                    <div class="d-flex align-content-center pt-2">
+                      <img
+                        class="click_image my-auto"
+                        src="/assets/img/png/tick2.png"
+                        alt="tick2"
+                      />
+                      <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">
+                        Yes Traffic Logs
+                      </p>
+                    </div>
+                    <div class="d-flex align-content-center pt-2">
+                      <img
+                        class="click_image my-auto"
+                        src="/assets/img/png/tick2.png"
+                        alt="tick2"
+                      />
+                      <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">
+                        Works on All Devices
+                      </p>
+                    </div>
+                    <div class="d-flex align-content-center pt-2">
+                      <img
+                        class="click_image my-auto"
+                        src="/assets/img/png/tick2.png"
+                        alt="tick2"
+                      />
+                      <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">
+                        Connect Anyware
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p class="ff_Rubik fw_500 fs_xl lightblue text-center">
+                  $9 <span class="grey">/ mo</span>
+                </p>
+                <a
+                  href="#"
+                  class="ff_Rubik fw_700 fs_sm orange d-inline-block Choose_box_btn text-center"
+                  >Select</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 pt-3 pt-lg-0" id="planeBox3">
+            <div
+              class="Choose_box_1 d-flex flex-column justify-content-between align-items-center"
+            >
+              <div class="d-flex flex-column align-items-center">
+                <div>
+                  <img
+                    class="w-100"
+                    src="/assets/img/png/box.png"
+                    alt="gift_box"
+                  />
+                  <p
+                    class="ff_Rubik fw_500 fs_md lightblue text-center pt-3 pt-lg-4"
+                  >
+                    Premium Plan
+                  </p>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <div class="d-flex flex-column">
+                    <div class="d-flex align-content-center pt-3 pt-lg-4">
+                      <img
+                        class="click_image my-auto"
+                        src="/assets/img/png/tick2.png"
+                        alt="tick2"
+                      />
+                      <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">
+                        Unlimited Bandwitch
+                      </p>
+                    </div>
+                    <div class="d-flex align-content-center pt-2">
+                      <img
+                        class="click_image my-auto"
+                        src="/assets/img/png/tick2.png"
+                        alt="tick2"
+                      />
+                      <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">
+                        Encrypted Connection
+                      </p>
+                    </div>
+                    <div class="d-flex align-content-center pt-2">
+                      <img
+                        class="click_image my-auto"
+                        src="/assets/img/png/tick2.png"
+                        alt="tick2"
+                      />
+                      <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">
+                        No Traffic Logs
+                      </p>
+                    </div>
+                    <div class="d-flex align-content-center pt-2">
+                      <img
+                        class="click_image my-auto"
+                        src="/assets/img/png/tick2.png"
+                        alt="tick2"
+                      />
+                      <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">
+                        Works on All Devices
+                      </p>
+                    </div>
+                    <div class="d-flex align-content-center pt-2">
+                      <img
+                        class="click_image my-auto"
+                        src="/assets/img/png/tick2.png"
+                        alt="tick2"
+                      />
+                      <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">
+                        Connect Anyware
+                      </p>
+                    </div>
+                    <div class="d-flex align-content-center pt-2">
+                      <img
+                        class="click_image my-auto"
+                        src="/assets/img/png/tick2.png"
+                        alt="tick2"
+                      />
+                      <p class="ff_Rubik fw_400 fs_ss grey mb-0 ps-4">
+                        Get New Features
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p class="ff_Rubik fw_500 fs_xl lightblue text-center">
+                  $12 <span class="grey">/ mo</span>
+                </p>
+                <a
+                  href="#"
+                  class="ff_Rubik fw_700 fs_sm orange d-inline-block Choose_box_btn text-center"
+                  >Select</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-
 
     <!----------------------------------------------- huge global section--------------------------------------- -->
     <div class="lightgrey_bg">
-        <div class="container pt-4 pt-lg-5 pb-xl-5">
-            <h2 class="ff_Rubik fw_500 fs_2xl lightblue text-center mx-auto Huge_h2_width">
-                Huge Global Network of Fast VPN
-            </h2>
+      <div class="container pt-4 pt-lg-5 pb-xl-5">
+        <h2
+          class="ff_Rubik fw_500 fs_2xl lightblue text-center mx-auto Huge_h2_width"
+        >
+          Huge Global Network of Fast VPN
+        </h2>
 
-            <p class="ff_Rubik fw_500 fs_sm grey text-center mx-auto Huge_p_width pt-2 pb-xl-5">
-                See LaslesVPN everywhere to make it easier for you when you move locations</p>
+        <p
+          class="ff_Rubik fw_500 fs_sm grey text-center mx-auto Huge_p_width pt-2 pb-xl-5"
+        >
+          See LaslesVPN everywhere to make it easier for you when you move
+          locations
+        </p>
 
-            <img class="w-100 pt-4 pt-lg-5" src="/assets/img/png/map.png" alt="map">
-            <div class="row align-items-center justify-content-center pt-3 pt-lg-5">
-                <div class="width_20_p12 col-6 col-md-4">
-                    <a href="#"> <img class="w-75" src="/assets/img/png/netflix.png" alt="netflix">
-                    </a>
-                </div>
-                <div class="width_20_p12 col-6 col-md-4">
-                    <a href="#"><img class="w-75 " src="/assets/img/png/reddit.png" alt="Reddit"></a>
-                </div>
+        <img
+          class="w-100 pt-4 pt-lg-5"
+          src="/assets/img/png/map.png"
+          alt="map"
+        />
+        <div class="row align-items-center justify-content-center pt-3 pt-lg-5">
+          <div class="width_20_p12 col-6 col-md-4">
+            <a href="#">
+              <img
+                class="w-75"
+                src="/assets/img/png/netflix.png"
+                alt="netflix"
+              />
+            </a>
+          </div>
+          <div class="width_20_p12 col-6 col-md-4">
+            <a href="#"
+              ><img class="w-75" src="/assets/img/png/reddit.png" alt="Reddit"
+            /></a>
+          </div>
 
-                <div class="width_20_p12 col-6 col-md-4 pt-3">
-                    <a href="#"> <img class="w-75 " src="/assets/img/png/amazon.png" alt="amazon">
-                    </a>
-                </div>
-                <div class="width_20_p12 col-6 col-md-4">
-                    <a href="#"> <img class="w-75 " src="/assets/img/png/discord.png" alt="discord"> </a>
-                </div>
-                <div class="width_20_p12 col-6 col-md-4">
-                    <a href="#"> <img class="w-75 " src="/assets/img/png/spotify.png" alt="spotify"> </a>
-                </div>
-            </div>
+          <div class="width_20_p12 col-6 col-md-4 pt-3">
+            <a href="#">
+              <img class="w-75" src="/assets/img/png/amazon.png" alt="amazon" />
+            </a>
+          </div>
+          <div class="width_20_p12 col-6 col-md-4">
+            <a href="#">
+              <img
+                class="w-75"
+                src="/assets/img/png/discord.png"
+                alt="discord"
+              />
+            </a>
+          </div>
+          <div class="width_20_p12 col-6 col-md-4">
+            <a href="#">
+              <img
+                class="w-75"
+                src="/assets/img/png/spotify.png"
+                alt="spotify"
+              />
+            </a>
+          </div>
         </div>
+      </div>
     </div>
     <!------------------------------------------ section ----------------------------------->
     <div class="lightgrey_bg">
-        <div class="container pt-3 pt-lg-5">
-            <h2 class="ff_Rubik fw_500 fs_2xl lightblue text-center Trusted_h2_width mx-auto">Trusted by Thousands of
-                Happy Customer</h2>
-            <p class="ff_Rubik fw_400 fs_sm grey text-center Trusted_width mx-auto pt-2">
-                These are the stories of our customers who have joined us with great pleasure when using this crazy
-                feature.
-            </p>
-            <div class="row slider pt-3 pt-lg-4">
-                <div class="col-4">
-                    <div class="slider_box">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <img src="/assets/img/png/robert.png" alt="robert">
-                                <div class="ps-3">
-                                    <p class=" ff_Rubik fw_500 fs_md lightblue mb-0">Viezh Robert</p>
-                                    <p class=" ff_Rubik fw_400 fs_ss grey mb-0">Warsaw, Poland</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <p class="ff_Rubik fw_400 fs_sm lightblue mb-0">4.5</p>
-                                <img class="ps-2" src="/assets/img/png/star.png" alt="star">
-                            </div>
-                        </div>
-                        <p class="ff_Rubik fw_400 fs_sm lightblue pt-3 ">
-                            “Wow... I am very happy to use this VPN, it turned out to be more than my expectations and
-                            so
-                            far there have been no
-                            problems. LaslesVPN always the best”.
-                        </p>
-                    </div>
+      <div class="container pt-3 pt-lg-5">
+        <h2
+          class="ff_Rubik fw_500 fs_2xl lightblue text-center Trusted_h2_width mx-auto"
+        >
+          Trusted by Thousands of Happy Customer
+        </h2>
+        <p
+          class="ff_Rubik fw_400 fs_sm grey text-center Trusted_width mx-auto pt-2"
+        >
+          These are the stories of our customers who have joined us with great
+          pleasure when using this crazy feature.
+        </p>
+        <div class="row slider pt-3 pt-lg-4">
+          <div class="col-4">
+            <div class="slider_box">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <img src="/assets/img/png/robert.png" alt="robert" />
+                  <div class="ps-3">
+                    <p class="ff_Rubik fw_500 fs_md lightblue mb-0">
+                      Viezh Robert
+                    </p>
+                    <p class="ff_Rubik fw_400 fs_ss grey mb-0">
+                      Warsaw, Poland
+                    </p>
+                  </div>
                 </div>
-                <div class="col-4">
-                    <div class="slider_box">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <img src="/assets/img/png/Yessica.png" alt="Yessica">
-                                <div class="ps-3">
-                                    <p class=" ff_Rubik fw_500 fs_md lightblue mb-0">Yessica Christy</p>
-                                    <p class=" ff_Rubik fw_400 fs_ss grey mb-0">Shanxi, China</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <p class="ff_Rubik fw_400 fs_sm lightblue mb-0">4.5</p>
-                                <img class="ps-2" src="/assets/img/png/star.png" alt="star">
-                            </div>
-                        </div>
-                        <p class="ff_Rubik fw_400 fs_sm lightblue pt-3 mb-0">
-                            “I like it because I like to travel far and still can connect with high speed.”.
-                        </p>
-                    </div>
+                <div class="d-flex align-items-center">
+                  <p class="ff_Rubik fw_400 fs_sm lightblue mb-0">4.5</p>
+                  <img class="ps-2" src="/assets/img/png/star.png" alt="star" />
                 </div>
-                <div class="col-4">
-                    <div class="slider_box">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <img src="/assets/img/png/kim.png" alt="Kim">
-                                <div class="ps-3">
-                                    <p class=" ff_Rubik fw_500 fs_md lightblue mb-0">Kim Young Jou</p>
-                                    <p class=" ff_Rubik fw_400 fs_ss grey mb-0">Seoul, South Korea</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <p class="ff_Rubik fw_400 fs_sm lightblue mb-0">4.5</p>
-                                <img class="ps-2" src="/assets/img/png/star.png" alt="star">
-                            </div>
-                        </div>
-                        <p class="ff_Rubik fw_400 fs_sm lightblue pt-3 mb-0">
-                            “This is very unusual for my business that currently requires a virtual private network that
-                            has high security.”.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="slider_box">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <img src="/assets/img/png/robert.png" alt="robert">
-                                <div class="ps-3">
-                                    <p class=" ff_Rubik fw_500 fs_md lightblue mb-0">Viezh Robert</p>
-                                    <p class=" ff_Rubik fw_400 fs_ss grey mb-0">Warsaw, Poland</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <p class="ff_Rubik fw_400 fs_sm lightblue mb-0">4.5</p>
-                                <img class="ps-2" src="/assets/img/png/star.png" alt="star">
-                            </div>
-                        </div>
-                        <p class="ff_Rubik fw_400 fs_sm lightblue pt-3 mb-0">
-                            “Wow... I am very happy to use this VPN, it turned out to be more than my expectations and
-                            so
-                            far there have been no
-                            problems. LaslesVPN always the best”.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="slider_box">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <img src="/assets/img/png/Yessica.png" alt="Christy">
-                                <div class="ps-3">
-                                    <p class=" ff_Rubik fw_500 fs_md lightblue mb-0">Yessica Christy</p>
-                                    <p class=" ff_Rubik fw_400 fs_ss grey mb-0">Shanxi, China</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <p class="ff_Rubik fw_400 fs_sm lightblue mb-0">4.5</p>
-                                <img class="ps-2" src="/assets/img/png/star.png" alt="star">
-                            </div>
-                        </div>
-                        <p class="ff_Rubik fw_400 fs_sm lightblue pt-3 mb-0">
-                            “I like it because I like to travel far and still can connect with high speed.”.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="slider_box">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <img src="/assets/img/png/kim.png" alt="Kim">
-                                <div class="ps-3">
-                                    <p class=" ff_Rubik fw_500 fs_md lightblue mb-0">Kim Young Jou</p>
-                                    <p class=" ff_Rubik fw_400 fs_ss grey mb-0">Seoul, South Korea</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <p class="ff_Rubik fw_400 fs_sm lightblue mb-0">4.5</p>
-                                <img class="ps-2" src="/assets/img/png/star.png" alt="star">
-                            </div>
-                        </div>
-                        <p class="ff_Rubik fw_400 fs_sm lightblue pt-3 mb-0">
-                            “This is very unusual for my business that currently requires a virtual private network that
-                            has high security.”.
-                        </p>
-                    </div>
-                </div>
+              </div>
+              <p class="ff_Rubik fw_400 fs_sm lightblue pt-3">
+                “Wow... I am very happy to use this VPN, it turned out to be
+                more than my expectations and so far there have been no
+                problems. LaslesVPN always the best”.
+              </p>
             </div>
-            <div class="d-flex justify-content-end mt-5">
-                <button class=" next slider_btn d-none d-xl-block" type="button"><span
-                        class="fs_2xl fw_700 slider_btn_arrow">&#8592;</span>
-                </button>
-                <button class=" back slider_btn ms-3 d-none d-xl-block" type="button"> <span
-                        class="fs_2xl fw_700 slider_btn_arrow">&#8594;</span>
-                </button>
+          </div>
+          <div class="col-4">
+            <div class="slider_box">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <img src="/assets/img/png/Yessica.png" alt="Yessica" />
+                  <div class="ps-3">
+                    <p class="ff_Rubik fw_500 fs_md lightblue mb-0">
+                      Yessica Christy
+                    </p>
+                    <p class="ff_Rubik fw_400 fs_ss grey mb-0">Shanxi, China</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="ff_Rubik fw_400 fs_sm lightblue mb-0">4.5</p>
+                  <img class="ps-2" src="/assets/img/png/star.png" alt="star" />
+                </div>
+              </div>
+              <p class="ff_Rubik fw_400 fs_sm lightblue pt-3 mb-0">
+                “I like it because I like to travel far and still can connect
+                with high speed.”.
+              </p>
             </div>
+          </div>
+          <div class="col-4">
+            <div class="slider_box">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <img src="/assets/img/png/kim.png" alt="Kim" />
+                  <div class="ps-3">
+                    <p class="ff_Rubik fw_500 fs_md lightblue mb-0">
+                      Kim Young Jou
+                    </p>
+                    <p class="ff_Rubik fw_400 fs_ss grey mb-0">
+                      Seoul, South Korea
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="ff_Rubik fw_400 fs_sm lightblue mb-0">4.5</p>
+                  <img class="ps-2" src="/assets/img/png/star.png" alt="star" />
+                </div>
+              </div>
+              <p class="ff_Rubik fw_400 fs_sm lightblue pt-3 mb-0">
+                “This is very unusual for my business that currently requires a
+                virtual private network that has high security.”.
+              </p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="slider_box">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <img src="/assets/img/png/robert.png" alt="robert" />
+                  <div class="ps-3">
+                    <p class="ff_Rubik fw_500 fs_md lightblue mb-0">
+                      Viezh Robert
+                    </p>
+                    <p class="ff_Rubik fw_400 fs_ss grey mb-0">
+                      Warsaw, Poland
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="ff_Rubik fw_400 fs_sm lightblue mb-0">4.5</p>
+                  <img class="ps-2" src="/assets/img/png/star.png" alt="star" />
+                </div>
+              </div>
+              <p class="ff_Rubik fw_400 fs_sm lightblue pt-3 mb-0">
+                “Wow... I am very happy to use this VPN, it turned out to be
+                more than my expectations and so far there have been no
+                problems. LaslesVPN always the best”.
+              </p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="slider_box">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <img src="/assets/img/png/Yessica.png" alt="Christy" />
+                  <div class="ps-3">
+                    <p class="ff_Rubik fw_500 fs_md lightblue mb-0">
+                      Yessica Christy
+                    </p>
+                    <p class="ff_Rubik fw_400 fs_ss grey mb-0">Shanxi, China</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="ff_Rubik fw_400 fs_sm lightblue mb-0">4.5</p>
+                  <img class="ps-2" src="/assets/img/png/star.png" alt="star" />
+                </div>
+              </div>
+              <p class="ff_Rubik fw_400 fs_sm lightblue pt-3 mb-0">
+                “I like it because I like to travel far and still can connect
+                with high speed.”.
+              </p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="slider_box">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <img src="/assets/img/png/kim.png" alt="Kim" />
+                  <div class="ps-3">
+                    <p class="ff_Rubik fw_500 fs_md lightblue mb-0">
+                      Kim Young Jou
+                    </p>
+                    <p class="ff_Rubik fw_400 fs_ss grey mb-0">
+                      Seoul, South Korea
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="ff_Rubik fw_400 fs_sm lightblue mb-0">4.5</p>
+                  <img class="ps-2" src="/assets/img/png/star.png" alt="star" />
+                </div>
+              </div>
+              <p class="ff_Rubik fw_400 fs_sm lightblue pt-3 mb-0">
+                “This is very unusual for my business that currently requires a
+                virtual private network that has high security.”.
+              </p>
+            </div>
+          </div>
         </div>
+        <div class="d-flex justify-content-end mt-5">
+          <button class="next slider_btn d-none d-xl-block" type="button">
+            <span class="fs_2xl fw_700 slider_btn_arrow">&#8592;</span>
+          </button>
+          <button class="back slider_btn ms-3 d-none d-xl-block" type="button">
+            <span class="fs_2xl fw_700 slider_btn_arrow">&#8594;</span>
+          </button>
+        </div>
+      </div>
     </div>
     <!----------------------------------- Subscribe section ---------------------------- -->
     <div class="lightgrey_bg">
-        <div class="container tranform_center">
-            <div
-                class="box_subscribe d-flex flex-column flex-lg-row text-center text-lg-start justify-content-between align-items-center">
-                <div>
-                    <h2 class=" ff_Rubik fw_500 fs_2xl lightblue subscribe_width_h2">Subscribe Now for Get Special
-                        Features!</h2>
-                    <p class="ff_Rubik fw_400 fs_sm  grey">Let's subscribe with us and find the fun.</p>
-                </div>
-                <a href="#" class="fw_700 fs_sm ff_Rubik button_hero_section d-inline-block text-white mt-xl-3">
-                    Subscribe Now</a>
-            </div>
+      <div class="container tranform_center">
+        <div
+          class="box_subscribe d-flex flex-column flex-lg-row text-center text-lg-start justify-content-between align-items-center"
+        >
+          <div>
+            <h2 class="ff_Rubik fw_500 fs_2xl lightblue subscribe_width_h2">
+              Subscribe Now for Get Special Features!
+            </h2>
+            <p class="ff_Rubik fw_400 fs_sm grey">
+              Let's subscribe with us and find the fun.
+            </p>
+          </div>
+          <a
+            href="#"
+            class="fw_700 fs_sm ff_Rubik button_hero_section d-inline-block text-white mt-xl-3"
+          >
+            Subscribe Now</a
+          >
         </div>
+      </div>
     </div>
     <!------------------------------ footer ------------------------>
 
-    <footer class="lightgrey_bg  pt-5 mt-5 mt-sm-0">
-        <div class="container pb-3 pb-lg-5 mt-5 pt_60_xsm_min pt_100_lg_min ">
-            <div class="row pt-5 pt-md-0">
-                <div class="col-12 col-md-5 d-flex align-items-center align-items-md-start flex-column">
-                    <div class="d-flex align-items-center ">
-                        <img class="" src="/assets/img/png/logo.png" alt="logo">
-                        <span class="ff_Rubik fw_500 lightblue fs_lg ps-1 ">Lasles<span
-                                class="fw_700 fs_lg">VPN</span></span>
-                    </div>
-                    <p class="ff_Rubik fw_500 fs_sm grey unique_widthpt-3 text-center text-md-start pt-3">
-                        LaslesVPN is a private virtual network that has unique features and has high security.
-                    </p>
-                    <div class="pb-4 pt-4">
-                        <a href="#"><img class="radius_100" src="/assets/img/png/Facebook.png" alt="facebook"></a>
-                        <a class="ps-4" href="#"><img class="radius_100" src="/assets/img/png/Twitter.png"
-                                alt="twitter"></a>
-                        <a class="ps-4" href="#"><img class="radius_100" src="/assets/img/png/Instagram.png"
-                                alt="instagram"></a>
-                    </div>
-                    <p class="ff_Rubik fw_500 fs_sm footer_p_color">©2020LaslesVPN</p>
-                </div>
-                <div class="col-12 col-md-7">
-                    <div class="row">
-                        <div class="col-6 col-lg-4 d-flex justify-content-center justify-content-md-start">
-                            <ul class="list-unstyled">
-                                <li><a href="#" class="ff_Rubik fw_500 fs_md lightblue">Product</a></li>
-                                <li><a href="#" class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-3">Download</a></li>
-                                <li><a href="#" class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2">Pricing</a></li>
-                                <li><a href="#" class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2">Locations</a>
-                                </li>
-                                <li><a href="#" class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2">Server</a></li>
-                                <li><a href="#" class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2">Countries</a>
-                                </li>
-                                <li><a href="#" class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2">Blog</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-6 col-lg-4 d-flex justify-content-center justify-content-md-start">
-                            <ul class="list-unstyled">
-                                <li><a href="#" class="ff_Rubik fw_500 fs_md lightblue">Engage</a></li>
-                                <li><a href="#" class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-3">LaslesVPN ?</a>
-                                </li>
-                                <li><a href="#" class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2">FAQ</a></li>
-                                <li><a href="#" class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2">Tutorials</a>
-                                </li>
-                                <li><a href="#" class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2">About Us</a></li>
-                                <li><a href="#" class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2">Privacy
-                                        Policy</a></li>
-                                <li><a href="#" class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2">Terms of
-                                        Service</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-lg-4 d-flex justify-content-center justify-content-md-start">
-                            <ul class="list-unstyled">
-                                <li><a href="#" class="ff_Rubik fw_500 fs_md lightblue">Earn Money</a></li>
-                                <li><a href="#" class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-3">Affiliate</a>
-                                </li>
-                                <li><a href="#" class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2">Become
-                                        Partner</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+    <footer class="lightgrey_bg pt-5 mt-5 mt-sm-0">
+      <div class="container pb-3 pb-lg-5 mt-5 pt_60_xsm_min pt_100_lg_min">
+        <div class="row pt-5 pt-md-0">
+          <div
+            class="col-12 col-md-5 d-flex align-items-center align-items-md-start flex-column"
+          >
+            <div class="d-flex align-items-center">
+              <img class="" src="/assets/img/png/logo.png" alt="logo" />
+              <span class="ff_Rubik fw_500 lightblue fs_lg ps-1"
+                >Lasles<span class="fw_700 fs_lg">VPN</span></span
+              >
             </div>
+            <p
+              class="ff_Rubik fw_500 fs_sm grey unique_widthpt-3 text-center text-md-start pt-3"
+            >
+              LaslesVPN is a private virtual network that has unique features
+              and has high security.
+            </p>
+            <div class="pb-4 pt-4">
+              <a href="#"
+                ><img
+                  class="radius_100"
+                  src="/assets/img/png/Facebook.png"
+                  alt="facebook"
+              /></a>
+              <a class="ps-4" href="#"
+                ><img
+                  class="radius_100"
+                  src="/assets/img/png/Twitter.png"
+                  alt="twitter"
+              /></a>
+              <a class="ps-4" href="#"
+                ><img
+                  class="radius_100"
+                  src="/assets/img/png/Instagram.png"
+                  alt="instagram"
+              /></a>
+            </div>
+            <p class="ff_Rubik fw_500 fs_sm footer_p_color">©2020LaslesVPN</p>
+          </div>
+          <div class="col-12 col-md-7">
+            <div class="row">
+              <div
+                class="col-6 col-lg-4 d-flex justify-content-center justify-content-md-start"
+              >
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" class="ff_Rubik fw_500 fs_md lightblue"
+                      >Product</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-3"
+                      >Download</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2"
+                      >Pricing</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2"
+                      >Locations</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2"
+                      >Server</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2"
+                      >Countries</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2"
+                      >Blog</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="col-6 col-lg-4 d-flex justify-content-center justify-content-md-start"
+              >
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" class="ff_Rubik fw_500 fs_md lightblue"
+                      >Engage</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-3"
+                      >LaslesVPN ?</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2"
+                      >FAQ</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2"
+                      >Tutorials</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2"
+                      >Terms of Service</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="col-12 col-lg-4 d-flex justify-content-center justify-content-md-start"
+              >
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" class="ff_Rubik fw_500 fs_md lightblue"
+                      >Earn Money</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-3"
+                      >Affiliate</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="ff_Rubik fw_400 fs_sm grey d-inline-block pt-2"
+                      >Become Partner</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
-
-
-
-
-
 
     <!-------------------------------------------script------------------------------------------->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-        </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script>
-        function navshow() {
-            document.getElementById("show").classList.toggle("left")
-            document.body.classList.toggle("overflowhiden")
-        }
+      function navshow() {
+        document.getElementById("show").classList.toggle("left");
+        document.body.classList.toggle("overflowhiden");
+      }
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script>
-        $('.slider').slick({
-            dots: true,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            arrows: true,
-            nextArrow: ".next",
-            prevArrow: ".back",
-            responsive: [
-                {
-                    breakpoint: 1400,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-
+      $(".slider").slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        nextArrow: ".next",
+        prevArrow: ".back",
+        responsive: [
+          {
+            breakpoint: 1400,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true,
+            },
+          },
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true,
+            },
+          },
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
     </script>
-
-</body>
-
+    <!-- gsap link -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- scrool trigger -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./assets/js/gsap.js"></script>
+  </body>
 </html>
