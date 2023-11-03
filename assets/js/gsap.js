@@ -26,7 +26,7 @@ gsap.from(".section_1_box #animationBox , .section_1_box", {
   scrollTrigger: {
     trigger: ".section_1_box",
     scroller: "body",
-    // markers: true,
+    // // markers: true,
     start: "top 70%",
     end: "top 30%",
     scrub: true,
@@ -41,7 +41,7 @@ gsap.from("#provideContainer #provideImage", {
   scrollTrigger: {
     trigger: ".section_1_box",
     scroller: "body",
-    // markers: true,
+    // // markers: true,
     start: "top 40%",
     end: "top 10%",
     scrub: true,
@@ -55,7 +55,7 @@ gsap.from("#provideContainer #provideData #provideText", {
   scrollTrigger: {
     trigger: ".section_1_box",
     scroller: "body",
-    // markers: true,
+    // // markers: true,
     start: "top 20%",
     end: "top 1%",
     scrub: true,
@@ -71,7 +71,7 @@ gsap.from("#plan #planeBox1,#plan #planeBox2,#plan #planeBox3", {
   scrollTrigger: {
     trigger: "#plan",
     scroller: "body",
-    markers: true,
+    // markers: true,
     start: "top 40%",
     end: "top 1%",
     scrub: true,
@@ -84,7 +84,7 @@ gsap.from("#plan .planeHeading", {
   scrollTrigger: {
     trigger: "#plan",
     scroller: "body",
-    markers: true,
+    // markers: true,
     start: "top 40%",
     end: "top 1%",
     scrub: true,
