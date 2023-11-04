@@ -41,114 +41,121 @@
     <title>LaslesVPN</title>
   </head>
 
-  <body>
-    <header class="min_vh_90 d-flex flex-column min_vh_60_xsm">
-      <nav class="pt-4">
-        <div class="container">
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center logo">
-              <img
-                class="logo_transform"
-                src="/assets/img/png/logo.png"
-                alt="logo"
-              />
-              <span class="ff_Rubik fw_500 lightblue fs_lg ps-1"
-                >Lasles<span class="fw_700 fs_lg">VPN</span></span
-              >
-            </div>
+  <body class="overflow-x-hidden">
+    <div class="min-vh-100" id="heroBg">
+      <header class="min_vh_90 d-flex flex-column min_vh_60_xsm" id="headerAll">
+        <nav class="pt-4">
+          <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center logo">
+                <img
+                  class="logo_transform"
+                  src="/assets/img/png/logo.png"
+                  alt="logo"
+                />
+                <span class="ff_Rubik fw_500 lightblue fs_lg ps-1"
+                  >Lasles<span class="fw_700 fs_lg">VPN</span></span
+                >
+              </div>
 
-            <ul class="d-flex list-unstyled mb-0" id="show">
-              <li class="fw_400 pl_40 ff_Rubik fs_sm grey">About</li>
-              <li>
-                <a href="#" class="fw_400 pl_40 ff_Rubik fs_sm grey"
-                  >Features</a
+              <ul class="d-flex list-unstyled mb-0" id="show">
+                <li class="fw_400 pl_40 ff_Rubik fs_sm grey">About</li>
+                <li>
+                  <a href="#" class="fw_400 pl_40 ff_Rubik fs_sm grey"
+                    >Features</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="fw_400 pl_40 ff_Rubik fs_sm grey"
+                    >Pricing</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="fw_400 pl_40 ff_Rubik fs_sm grey"
+                    >Testimonials</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="fw_400 pl_40 ff_Rubik fs_sm grey">Help</a>
+                </li>
+                <li>
+                  <a href="#" class="fw_500 pl_40 ff_Rubik fs_sm grey d-xl-none"
+                    >Sign In</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="fw_400 pl_40 ff_Rubik fs_sm grey pink nav_button d-xl-none"
+                    >Sign Up</a
+                  >
+                </li>
+              </ul>
+
+              <ul class="d-flex d-xl-flex d-none list-unstyled mb-0" id="btns">
+                <li>
+                  <a href="#" class="fw_500 pe-lg-3 ff_Rubik fs_sm grey"
+                    >Sign In</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="fw_400 ff_Rubik fs_sm grey pink nav_button"
+                    >Sign Up</a
+                  >
+                </li>
+              </ul>
+              <span class="d-flex flex-column d-xl-none" onclick="navshow()">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </span>
+            </div>
+          </div>
+        </nav>
+        <!------------------------------ hero section----------------------------------------------------------- -->
+        <div
+          class="container d-flex flex-grow-1 align-items-center"
+          id="heroAll"
+        >
+          <div>
+            <div
+              class="row text-center text-md-start flex-column-reverse flex-md-row"
+            >
+              <div class="col-12 col-md-6 heroPara">
+                <h1
+                  class="ff_Rubik fw_500 fs_3xl lightblue pt-3 pt-md-0 pe- xl-5"
+                  id="heroParaAnimation"
                 >
-              </li>
-              <li>
-                <a href="#" class="fw_400 pl_40 ff_Rubik fs_sm grey">Pricing</a>
-              </li>
-              <li>
-                <a href="#" class="fw_400 pl_40 ff_Rubik fs_sm grey"
-                  >Testimonials</a
+                  Want anything to be easy with
+                  <span class="fw_700" id="SpanText">LaslesVPN.</span>
+                </h1>
+                <p
+                  class="fw_500 fs_sm ff_Rubik grey pt-xl-3 pe-xl-3"
+                  id="heroParaAnimation"
                 >
-              </li>
-              <li>
-                <a href="#" class="fw_400 pl_40 ff_Rubik fs_sm grey">Help</a>
-              </li>
-              <li>
-                <a href="#" class="fw_500 pl_40 ff_Rubik fs_sm grey d-xl-none"
-                  >Sign In</a
-                >
-              </li>
-              <li>
+                  Provide a network for all your needs with ease and fun using
+                  LaslesVPN discover interesting features from us.
+                </p>
                 <a
                   href="#"
-                  class="fw_400 pl_40 ff_Rubik fs_sm grey pink nav_button d-xl-none"
-                  >Sign Up</a
+                  class="fw_700 fs_sm ff_Rubik button_hero_section d-inline-block text-white mt-xl-3"
+                  id="heroParaAnimation"
+                  >Get Started</a
                 >
-              </li>
-            </ul>
-
-            <ul class="d-flex d-xl-flex d-none list-unstyled mb-0" id="btns">
-              <li>
-                <a href="#" class="fw_500 pe-lg-3 ff_Rubik fs_sm grey"
-                  >Sign In</a
-                >
-              </li>
-              <li>
-                <a href="#" class="fw_400 ff_Rubik fs_sm grey pink nav_button"
-                  >Sign Up</a
-                >
-              </li>
-            </ul>
-            <span class="d-flex flex-column d-xl-none" onclick="navshow()">
-              <span class="line"></span>
-              <span class="line"></span>
-              <span class="line"></span>
-            </span>
-          </div>
-        </div>
-      </nav>
-      <!------------------------------ hero section----------------------------------------------------------- -->
-      <div class="container d-flex flex-grow-1 align-items-center">
-        <div>
-          <div
-            class="row text-center text-md-start flex-column-reverse flex-md-row"
-          >
-            <div class="col-12 col-md-6 heroPara">
-              <h1
-                class="ff_Rubik fw_500 fs_3xl lightblue pt-3 pt-md-0 pe- xl-5"
-                id="heroParaAnimation"
-              >
-                Want anything to be easy with
-                <span class="fw_700" id="SpanText">LaslesVPN.</span>
-              </h1>
-              <p
-                class="fw_500 fs_sm ff_Rubik grey pt-xl-3 pe-xl-3"
-                id="heroParaAnimation"
-              >
-                Provide a network for all your needs with ease and fun using
-                LaslesVPN discover interesting features from us.
-              </p>
-              <a
-                href="#"
-                class="fw_700 fs_sm ff_Rubik button_hero_section d-inline-block text-white mt-xl-3"
-                id="heroParaAnimation"
-                >Get Started</a
-              >
-            </div>
-            <div class="col-12 col-md-6" id="heroImage">
-              <img
-                class="w-100"
-                id="imageHero"
-                src="/assets/img/svg/section_1_image.svg"
-                alt="section_1_image"
-              />
+              </div>
+              <div class="col-12 col-md-6" id="heroImage">
+                <img
+                  class="w-100"
+                  id="imageHero"
+                  src="/assets/img/svg/section_1_image.svg"
+                  alt="section_1_image"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
     <div class="container">
       <div class="section_1_box mt-3">
         <div
@@ -203,6 +210,7 @@
         </div>
       </div>
     </div>
+
     <!------------------------------------------------- Provide --------------------------------------------------------->
 
     <div class="container py-3 py-lg-5" id="provideContainer">
